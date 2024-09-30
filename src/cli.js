@@ -7,3 +7,4 @@ export default function getUserName() {
 
   console.log(`Hi ${userName}!`);
 }
+
