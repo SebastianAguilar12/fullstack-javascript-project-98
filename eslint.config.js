@@ -1,6 +1,4 @@
-// eslint.config.js
 import globals from 'globals';
-
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
@@ -53,7 +51,9 @@ export default [
       'import/no-named-as-default-member': 'off',
       'no-console': 'off',
       'import/no-extraneous-dependencies': 'off',
-      'import/no-amd':'off',
+      'import/no-amd': 'off',
+      'import/no-mutable-exports': 'off',
+      'import/newline-after-import': 'off',
     },
   },
 ];
