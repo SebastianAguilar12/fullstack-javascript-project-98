@@ -54,6 +54,7 @@ export default [
       'import/no-amd': 'off',
       'import/no-mutable-exports': 'off',
       'import/newline-after-import': 'off',
+      'import/first': 'off',
     },
   },
 ];

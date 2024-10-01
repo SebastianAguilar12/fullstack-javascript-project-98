@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "brain-even": "^0.1.12",
     "lint": "^1.1.2",
     "lodash": "^4.17.21",
     "readline-sync": "^1.4.10"
@@ -19,7 +20,8 @@
   },
   "license": "ISC",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
