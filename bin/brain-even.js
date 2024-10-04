@@ -12,14 +12,16 @@ const getIntegerNumber = (min, max) => {
   return intNumber;
 };
 
-for (let i = 1; i <= 3; i++) {
+export {getIntegerNumber};
+
+for (let i = 1; i <= 3; i += 1) {
   const questionNumber = getIntegerNumber(1, 100);
 
-  console.log("Pregunta: " + questionNumber);
+  console.log(`Pregunta: ${questionNumber}`);
 
   const userAnswer = readLineSync.question("Tu respuesta: ");
 
-  const result = questionNumber % 2; //se declara variable con el número aleatorio obtenido para evaluar su módulo entre 2.
+  const result = questionNumber % 2; // se declara variable con el número aleatorio obtenido para evaluar su módulo entre 2.
 
   if (result === 0) {
     if (userAnswer === "yes") {
