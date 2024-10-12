@@ -1,7 +1,9 @@
-import readLineSync from "readline-sync";
 import getUserName from "../src/cli.js";
+import { checkAnswer } from "./index.js";
 
 const userName = getUserName();
+
+export { userName };
 
 console.log(
   'Responde "yes" si el número es par, de lo contrario responde "no".',
@@ -12,36 +14,28 @@ const getIntegerNumber = (min, max) => {
   return intNumber;
 };
 
-export {getIntegerNumber};
+export { getIntegerNumber };
 
 for (let i = 1; i <= 3; i += 1) {
   const questionNumber = getIntegerNumber(1, 100);
 
   console.log(`Pregunta: ${questionNumber}`);
 
-  const userAnswer = readLineSync.question("Tu respuesta: ");
-
   const result = questionNumber % 2; // se declara variable con el número aleatorio obtenido para evaluar su módulo entre 2.
 
+  let correctAnswer = 0;
+
   if (result === 0) {
-    if (userAnswer === "yes") {
-      console.log("¡Correcto!");
-    } else {
-      console.log(
-        `'${userAnswer}' es una respuesta incorrecta ;(. La respuesta correcta era 'yes'\n¡Intentémoslo de nuevo, ${userName}!`,
-      );
+    correctAnswer = "yes";
+    if (!checkAnswer (undefined, correctAnswer, userName)){
       break;
-    }
+    };
   }
   if (result !== 0) {
-    if (userAnswer === "no") {
-      console.log("¡Correcto!");
-    } else {
-      console.log(
-        `'${userAnswer}' es una respuesta incorrecta ;(. La respuesta correcta era 'no'\n¡Intentémoslo de nuevo, ${userName}!`,
-      );
+    correctAnswer = "no";
+    if (!checkAnswer (undefined, correctAnswer, userName)){
       break;
-    }
+    };
   }
   if (i === 3) {
     console.log(`¡Felicidades, ${userName}!`);
