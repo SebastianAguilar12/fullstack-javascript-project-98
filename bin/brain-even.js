@@ -1,5 +1,6 @@
 import getUserName from "../src/cli.js";
 import { checkAnswer } from "./index.js";
+import { getIntegerNumber } from "./functions.js";
 
 const userName = getUserName();
 
@@ -8,13 +9,6 @@ export { userName };
 console.log(
   'Responde "yes" si el número es par, de lo contrario responde "no".',
 );
-
-const getIntegerNumber = (min, max) => {
-  const intNumber = Math.floor(Math.random() * (max - min));
-  return intNumber;
-};
-
-export { getIntegerNumber };
 
 for (let i = 1; i <= 3; i += 1) {
   const questionNumber = getIntegerNumber(1, 100);

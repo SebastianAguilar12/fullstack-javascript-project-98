@@ -1,3 +1,7 @@
+const getIntegerNumber = (min, max) => {
+    const intNumber = Math.floor(Math.random() * (max - min));
+    return intNumber;
+};
 
 const getRandomOperator = (operatorsArray) => {
 
@@ -25,4 +29,4 @@ const multRandomArguments = (firstFactor, secondFactor) => {
 }
 
 
-export { getRandomOperator, sumRandomArguments, restRandomArguments, multRandomArguments };
+export { getIntegerNumber, getRandomOperator, sumRandomArguments, restRandomArguments, multRandomArguments };

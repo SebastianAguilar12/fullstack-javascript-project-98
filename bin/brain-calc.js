@@ -1,7 +1,7 @@
 import getUserName from "../src/cli.js";
-import { getIntegerNumber } from "./brain-even.js";
 import { checkAnswer } from "./index.js";
 import {
+  getIntegerNumber,
   getRandomOperator,
   sumRandomArguments,
   restRandomArguments,
