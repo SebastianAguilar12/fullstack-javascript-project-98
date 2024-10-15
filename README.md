@@ -6,3 +6,4 @@ Brain-calc-test asciinema file:
 https://asciinema.org/a/Nblv9jztfqAqpNVBnvRpKz7xL
 Brain-gcd file.js test https://asciinema.org/a/mQWUUhC2MLL1oACnhZOQgO7j3
  Brain-progression-test file Asciinema: https://asciinema.org/a/BowVo7Zbq1RAV6foOLYqXUzcu 
+Brain-prime-test file asciinema: https://asciinema.org/a/FSe1eyThBed3xLRT4LxOJKklI
