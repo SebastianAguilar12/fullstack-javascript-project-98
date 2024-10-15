@@ -1,5 +1,5 @@
 const getIntegerNumber = (min, max) => {
-    const intNumber = Math.floor(Math.random() * (max - min));
+    const intNumber = Math.floor(Math.random() * (max - min)) + 1;
     return intNumber;
 };
 
