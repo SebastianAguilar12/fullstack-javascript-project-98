@@ -1,6 +1,6 @@
 import getUserName from '../src/cli.js';
-import checkAnswer from '../bin/index.js';
-import { getIntegerNumber } from '../bin/functions.js';
+import checkAnswer from './index.js';
+import { getIntegerNumber } from './functions.js';
 
 const userName = getUserName();
 
