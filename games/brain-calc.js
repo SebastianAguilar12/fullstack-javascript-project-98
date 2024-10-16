@@ -1,12 +1,12 @@
 import getUserName from '../src/cli.js';
-import checkAnswer from './index.js';
+import checkAnswer from '../bin/index.js';
 import {
   getIntegerNumber,
   getRandomOperator,
   sumRandomArguments,
   restRandomArguments,
   multRandomArguments,
-} from './functions.js';
+} from '../bin/functions.js';
 
 const userName = getUserName();
 
