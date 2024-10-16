@@ -25,6 +25,8 @@ const showRandomCalc = (firstNumberCalc, secondNumberCalc, calcOperator) => {
     case '*':
       resultCalc = multRandomArguments(firstNumberCalc, secondNumberCalc);
       return resultCalc;
+    default:
+      return null;
   }
 };
 
@@ -40,7 +42,7 @@ for (let i = 1; i <= 3; i += 1) {
   console.log(
     `Pregunta: ${firstNumberCalc} ${randomOperator} ${secondNumberCalc}`,
   );
-  if (!checkAnswer(undefined, randomCalc, userName)) {
+  if (!checkAnswer(randomCalc, userName)) {
     break;
   }
   if (i === 3) {

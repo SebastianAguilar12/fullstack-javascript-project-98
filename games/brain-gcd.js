@@ -7,23 +7,28 @@ const userName = getUserName();
 console.log('Encuentra el máximo común divisor de los números dados.');
 
 const getGreatCommonDivisor = (firstFactor, secondFactor) => {
-  while (firstFactor !== 0 && secondFactor !== 0) {
-    let tempValue = firstFactor;
-    if (firstFactor !== 0 && secondFactor !== 0) {
-      firstFactor = secondFactor;
-      secondFactor = tempValue % secondFactor;
+  let modifiedFirstFactor = firstFactor;
+  let modifiedSecondFactor = secondFactor;
+  while (modifiedFirstFactor !== 0 && modifiedSecondFactor !== 0) {
+    const tempValue = modifiedFirstFactor;
+    if (modifiedFirstFactor !== 0 && modifiedSecondFactor !== 0) {
+      modifiedFirstFactor = modifiedSecondFactor;
+      modifiedSecondFactor = tempValue % modifiedSecondFactor;
     }
   }
-  return firstFactor || secondFactor;       
+  return modifiedFirstFactor || modifiedSecondFactor;
 };
 
 for (let i = 1; i <= 3; i += 1) {
   const randomNumber1 = getIntegerNumber(1, 100);
   const randomNumber2 = getIntegerNumber(1, 100);
+
   console.log(`El primer número es: ${randomNumber1}`);
   console.log(`El segundo número es: ${randomNumber2}`);
+
   const greatCommonDivisor = getGreatCommonDivisor(randomNumber1, randomNumber2);
-  if (!checkAnswer(undefined, greatCommonDivisor, userName)) {
+
+  if (!checkAnswer(greatCommonDivisor, userName)) {
     break;
   }
   if (i === 3) {
