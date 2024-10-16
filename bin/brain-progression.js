@@ -1,10 +1,10 @@
-import { getIntegerNumber } from "./functions.js";
-import getUserName from "../src/cli.js";
-import { checkAnswer } from "./index.js";
+import { getIntegerNumber } from './functions.js';
+import getUserName from '../src/cli.js';
+import checkAnswer from './index.js';
 
 const userName = getUserName();
 
-console.log("¿Qué número falta en la progresión?");
+console.log('¿Qué número falta en la progresión?');
 
 const progressionLength = 10;
 
@@ -14,33 +14,34 @@ const makeProgression = (
   hiddenPosition,
   progressionArray,
 ) => {
-  for (let i = 1; i <= progressionLength; i++) {
-    progressionArray.push(progressionNumbers + progressionKey);
-    progressionNumbers += progressionKey;
+  let progressionNumbers1 = progressionNumbers;
+  for (let i = 1; i <= progressionLength; i += 1) {
+    progressionArray.push(progressionNumbers1 + progressionKey);
+    progressionNumbers1 += progressionKey;
   }
-  for (let j = 0; j < progressionLength; j++) {
+  for (let j = 0; j < progressionLength; j += 1) {
     if (j !== hiddenPosition) {
       console.log(progressionArray[j]);
     } else {
-      console.log("..");
+      console.log('..');
     }
   }
   const result = progressionArray[hiddenPosition];
   return result;
 };
 
-for (let k = 1; k <= 3; k++) {
-  let progressionNumbers = getIntegerNumber(1, 100);
+for (let k = 1; k <= 3; k += 1) {
+  const progressionNumbers = getIntegerNumber(1, 100);
   const progressionKey = getIntegerNumber(1, 5);
   const hiddenPosition = getIntegerNumber(0, progressionLength - 1);
-  let progressionArray = [];
+  const progressionArray = [];
   const checkedProgression = makeProgression(
     progressionNumbers,
     progressionKey,
     hiddenPosition,
     progressionArray,
   );
-  if (!checkAnswer(undefined, checkedProgression, userName)) {
+  if (!checkAnswer(checkedProgression, userName)) {
     break;
   }
   if (k === 3) {
