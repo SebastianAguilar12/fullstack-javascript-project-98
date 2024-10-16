@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { getIntegerNumber } from './functions.js';
 import getUserName from '../src/cli.js';
 import checkAnswer from './index.js';
