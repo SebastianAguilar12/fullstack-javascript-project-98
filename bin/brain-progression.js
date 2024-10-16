@@ -22,9 +22,9 @@ const makeProgression = (
   }
   for (let j = 0; j < progressionLength; j += 1) {
     if (j !== hiddenPosition) {
-      console.log(progressionArray[j]);
+      process.stdout.write(progressionArray[j] + ' ');
     } else {
-      console.log('..');
+      process.stdout.write('..');
     }
   }
   const result = progressionArray[hiddenPosition];
