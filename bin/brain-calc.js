@@ -43,7 +43,7 @@ for (let i = 1; i <= 3; i += 1) {
   console.log(
     `Pregunta: ${firstNumberCalc} ${randomOperator} ${secondNumberCalc}`,
   );
-  if (!checkAnswer(undefined, randomCalc, userName)) {
+  if (!checkAnswer(randomCalc, userName)) {
     break;
   }
   if (i === 3) {
