@@ -25,14 +25,14 @@ for (let j = 1; j <= 3; j += 1) {
   let correctAnswer = '';
   console.log(`Pregunta: ${checkedNumber}`);
   if (primeCheck) {
-    correctAnswer = 'yes';
+    correctAnswer = "yes";
   } else {
-    correctAnswer = 'no';
-  }
-  if (!checkAnswer(correctAnswer, userName)) {
+    correctAnswer = "no";
+  };
+  if (!checkAnswer(undefined, correctAnswer, userName)) {
     break;
-  }
+  };
   if (j === 3) {
     console.log(`¡Felicidades ${userName}!`);
-  }
+  };
 }

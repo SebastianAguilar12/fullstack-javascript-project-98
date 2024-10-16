@@ -14,16 +14,15 @@ const makeProgression = (
   hiddenPosition,
   progressionArray,
 ) => {
-  let progressionNumbers1 = progressionNumbers;
   for (let i = 1; i <= progressionLength; i += 1) {
-    progressionArray.push(progressionNumbers1 + progressionKey);
-    progressionNumbers1 += progressionKey;
+    progressionArray.push(progressionNumbers + progressionKey);
+    progressionNumbers += progressionKey;
   }
   for (let j = 0; j < progressionLength; j += 1) {
     if (j !== hiddenPosition) {
       console.log(progressionArray[j]);
     } else {
-      console.log('..');
+      console.log("..");
     }
   }
   const result = progressionArray[hiddenPosition];
@@ -31,17 +30,17 @@ const makeProgression = (
 };
 
 for (let k = 1; k <= 3; k += 1) {
-  const progressionNumbers = getIntegerNumber(1, 100);
+  let progressionNumbers = getIntegerNumber(1, 100);
   const progressionKey = getIntegerNumber(1, 5);
   const hiddenPosition = getIntegerNumber(0, progressionLength - 1);
-  const progressionArray = [];
+  let progressionArray = [];
   const checkedProgression = makeProgression(
     progressionNumbers,
     progressionKey,
     hiddenPosition,
     progressionArray,
   );
-  if (!checkAnswer(checkedProgression, userName)) {
+  if (!checkAnswer(undefined, checkedProgression, userName)) {
     break;
   }
   if (k === 3) {
