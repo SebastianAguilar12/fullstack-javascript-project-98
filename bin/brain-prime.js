@@ -34,6 +34,6 @@ for (let j = 1; j <= 3; j += 1) {
     break;
   }
   if (j === 3) {
-    console.log(`¡Felicidades ${userName}!`);
+    console.log(`¡Felicidades, ${userName}!`);
   }
 }
