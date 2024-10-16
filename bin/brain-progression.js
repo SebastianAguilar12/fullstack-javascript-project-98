@@ -24,14 +24,16 @@ const makeProgression = (
     if (j !== hiddenPosition) {
       process.stdout.write(progressionArray[j] + ' ');
     } else {
-      process.stdout.write('..');
+      process.stdout.write('.. ');
     }
   }
+  console.log();
   const result = progressionArray[hiddenPosition];
   return result;
 };
 
 for (let k = 1; k <= 3; k += 1) {
+  process.stdout.write('Pregunta: ');
   let progressionNumbers = getIntegerNumber(1, 100);
   const progressionKey = getIntegerNumber(1, 5);
   const hiddenPosition = getIntegerNumber(0, progressionLength - 1);
