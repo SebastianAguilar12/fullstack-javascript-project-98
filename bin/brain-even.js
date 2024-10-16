@@ -16,15 +16,15 @@ for (let i = 1; i <= 3; i += 1) {
   let correctAnswer = 0;
   if (result === 0) {
     correctAnswer = 'yes';
-    if (!checkAnswer (correctAnswer, userName)){
+    if (!checkAnswer(correctAnswer, userName)) {
       break;
-    };
+    }
   }
   if (result !== 0) {
     correctAnswer = 'no';
-    if (!checkAnswer (correctAnswer, userName)){
+    if (!checkAnswer(correctAnswer, userName)) {
       break;
-    };
+    }
   }
   if (i === 3) {
     console.log(`¡Felicidades, ${userName}!`);

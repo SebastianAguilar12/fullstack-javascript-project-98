@@ -3,8 +3,8 @@ const getIntegerNumber = (min, max) => {
   return intNumber;
 };
 
-const getRandomOperator = (operatorsArray) => {
-  operatorsArray = ['+', '-', '*'];
+const getRandomOperator = () => {
+  const operatorsArray = ['+', '-', '*'];
   const randomOperatorIndex = Math.floor(Math.random() * (operatorsArray.length));
   return operatorsArray[randomOperatorIndex];
 };
@@ -24,10 +24,10 @@ const multRandomArguments = (firstFactor, secondFactor) => {
   return resultMult;
 };
 
-export { 
-  getIntegerNumber, 
-  getRandomOperator, 
-  sumRandomArguments, 
-  restRandomArguments, 
-  multRandomArguments 
+export {
+  getIntegerNumber,
+  getRandomOperator,
+  sumRandomArguments,
+  restRandomArguments,
+  multRandomArguments,
 };

@@ -17,10 +17,10 @@ const getGreatCommonDivisor = (firstFactor, secondFactor) => {
       modifiedSecondFactor = tempValue % modifiedSecondFactor;
     }
   }
-  return modifiedFirstFactor || modifiedSecondFactor;       
+  return modifiedFirstFactor || modifiedSecondFactor;
 };
 
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 3; i += 1) {
   const randomNumber1 = getIntegerNumber(1, 100);
   const randomNumber2 = getIntegerNumber(1, 100);
   console.log(`Pregunta: ${randomNumber1} ${randomNumber2}`);

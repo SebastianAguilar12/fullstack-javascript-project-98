@@ -22,7 +22,7 @@ const makeProgression = (
   }
   for (let j = 0; j < progressionLength; j += 1) {
     if (j !== hiddenPosition) {
-      process.stdout.write(progressionArray[j] + ' ');
+      process.stdout.write(`${progressionArray[j]} `);
     } else {
       process.stdout.write('.. ');
     }
@@ -34,15 +34,15 @@ const makeProgression = (
 
 for (let k = 1; k <= 3; k += 1) {
   process.stdout.write('Pregunta: ');
-  let progressionNumbers = getIntegerNumber(1, 100);
+  const progressionNumbers = getIntegerNumber(1, 100);
   const progressionKey = getIntegerNumber(1, 5);
   const hiddenPosition = getIntegerNumber(0, progressionLength - 1);
-  let progressionArray = [];
+  const progressionArray = [];
   const checkedProgression = makeProgression(
     progressionNumbers,
     progressionKey,
     hiddenPosition,
-    progressionArray
+    progressionArray,
   );
   if (!checkAnswer(checkedProgression, userName)) {
     break;
