@@ -1,36 +1,34 @@
-import getUserName from '../src/cli.js';
-import checkAnswer from './index.js';
+import getUserName from "../src/cli.js";
+import { checkAnswer } from "./index.js";
 import {
   getIntegerNumber,
   getRandomOperator,
   sumRandomArguments,
   restRandomArguments,
   multRandomArguments,
-} from './functions.js';
+} from "./functions.js";
 
 const userName = getUserName();
 
-console.log('¿Cuál es el resultado de la expresión?');
+console.log("¿Cuál es el resultado de la expresión?");
 
 let resultCalc = 0;
 
 const showRandomCalc = (firstNumberCalc, secondNumberCalc, calcOperator) => {
   switch (calcOperator) {
-    case '+':
+    case "+":
       resultCalc = sumRandomArguments(firstNumberCalc, secondNumberCalc);
       return resultCalc;
-    case '-':
+    case "-":
       resultCalc = restRandomArguments(firstNumberCalc, secondNumberCalc);
       return resultCalc;
-    case '*':
+    case "*":
       resultCalc = multRandomArguments(firstNumberCalc, secondNumberCalc);
       return resultCalc;
-    default:
-      return null;
   }
 };
 
-for (let i = 1; i <= 3; i += 1) {
+for (let i = 1; i <= 3; i++) {
   const firstNumberCalc = getIntegerNumber(1, 100);
   const randomOperator = getRandomOperator();
   const secondNumberCalc = getIntegerNumber(1, 100);
@@ -42,7 +40,7 @@ for (let i = 1; i <= 3; i += 1) {
   console.log(
     `Pregunta: ${firstNumberCalc} ${randomOperator} ${secondNumberCalc}`,
   );
-  if (!checkAnswer(randomCalc, userName)) {
+  if (!checkAnswer(undefined, randomCalc, userName)) {
     break;
   }
   if (i === 3) {
