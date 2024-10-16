@@ -23,8 +23,7 @@ const getGreatCommonDivisor = (firstFactor, secondFactor) => {
 for (let i = 1; i <= 3; i++) {
   const randomNumber1 = getIntegerNumber(1, 100);
   const randomNumber2 = getIntegerNumber(1, 100);
-  console.log(`El primer número es: ${randomNumber1}`);
-  console.log(`El segundo número es: ${randomNumber2}`);
+  console.log(`Pregunta: ${randomNumber1} ${randomNumber2}`);
   const greatCommonDivisor = getGreatCommonDivisor(randomNumber1, randomNumber2);
   if (!checkAnswer(greatCommonDivisor, userName)) {
     break;
