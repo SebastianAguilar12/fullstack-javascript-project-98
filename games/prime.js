@@ -34,6 +34,6 @@ export default () => {
     if (j === 3) {
       console.log(`¡Felicidades, ${userName}!`);
     }
-  };
+  }
   return true;
-}
+};

@@ -2,7 +2,7 @@ import getUserName from '../src/cli.js';
 import checkAnswer from '../bin/index.js';
 import { getIntegerNumber } from '../bin/functions.js';
 
-export default () => {  
+export default () => {
   const userName = getUserName();
   console.log(
     'Responde "yes" si el número es par, de lo contrario responde "no".',
@@ -28,6 +28,6 @@ export default () => {
     if (i === 3) {
       console.log(`¡Felicidades, ${userName}!`);
     }
-  };
+  }
   return true;
-}
+};

@@ -47,6 +47,6 @@ export default () => {
     if (k === 3) {
       console.log(`¡Felicidades, ${userName}!`);
     }
-  };
+  }
   return true;
-}
+};
